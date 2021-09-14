@@ -48,7 +48,7 @@ app.get('/refresh', function(req, res) {
         if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' });
 
         var new_token = generateAccessToken({ username: current_username });
-        res.status(200).send({'new toekn': new_token});
+        res.status(200).send({'new token': new_token});
     });
 });
 
